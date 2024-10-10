@@ -95,7 +95,70 @@ margin: 10px;
         height: 60px;
         width: 100%;
       }
+      .subtitle{
+        text-align: left;
+        width: 100%;
+        padding-left: 50px;
+      }
+      .redsub{
+        color: #B22424;
+      }
+      .itemdiv{
+        width: 95%;
+        
+        background-color: #FF5674;
+        border-radius: 16.2px;
+        display: flex;
+        flex-direction: row;
+        padding:10px;
+        gap: 10px;
 
+      }
+      .itemlogo{
+        height: 90%;
+      }
+  
+      .itemtitleDiv{
+        display:flex;
+        flex-direction:column;
+        gap: 5px;
+      }
+
+      .itemSubTitle{
+        color: #6EAFFF;
+      }
+      .itemTitle{
+        color: white;
+        font-size: 1.8em;
+      }
+      .itemsub{
+        margin-left: 40px;
+        background-color: #FEECEC;
+        width: 45%;
+        height: 65px;
+  
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item{
+        color: #76A4FF
+      }
+
+      .itemred{
+        color: red;
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+      .itemlist{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
       @media (max-width: 600px) {
         .page {
           align-self: stretch;
@@ -148,7 +211,29 @@ margin: 10px;
               />
             </button>
       </div>
-      <div class=""><p class="sub"><span class="redsub">환율 수수료</span>검색 결과에요</p></div>
+      <div class="subtitle"><p class="sub"><span class="redsub">환율 수수료 </span>검색 결과에요</p></div>
+      <div class="itemlist">
+      <div class="itemdiv">
+        <img class="itemlogo" src="bank_2.png" alt="bankimg">
+        <div class="itemtitleDiv">
+            <div class="itemSubTitle">우리은행</div>
+            <div class="itemTitle">인터넷 환전</div>
+        </div>
+        <div class="itemsub">
+            <p class="item">미국 달러(USD) 기준 <span class="itemred">0.48%</span></p>
+        </div>
+      </div>
+      <div class="itemdiv">
+        <img class="itemlogo" src="bank_2.png" alt="bankimg">
+        <div class="itemtitleDiv">
+            <div class="itemSubTitle">우리은행</div>
+            <div class="itemTitle">인터넷 환전</div>
+        </div>
+        <div class="itemsub">
+            <p class="item">미국 달러(USD) 기준 <span class="itemred">0.48%</span></p>
+        </div>
+      </div>
+    </div>
     </div>
   </body>
 </html>
