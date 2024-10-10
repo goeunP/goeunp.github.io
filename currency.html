@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .page {
+        align-self: stretch;
+        display: flex;
+        min-height: 1208px;
+        width: 558px;
+        flex-direction: column;
+        justify-content: start;
+        margin: auto 0;
+      }
+      .logo-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+      }
+      .main-logo {
+        aspect-ratio: 8.62;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+      .currency-form {
+        background-color: #fff;
+        display: flex;
+        max-width: 556px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        font-family: "Noto Sans KR", sans-serif;
+        color: #afafaf;
+        font-weight: 700;
+      }
+      .form-title {
+        color: #565656;
+        font-size: 40px;
+        margin-top: 64px;
+      }
+
+      .currency-selector {
+        display: flex;
+        margin-top: 64px;
+        align-items: center;
+        gap: 30px;
+        font-weight: 500;
+        /* white-space: nowrap; */
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .currency-option {
+        border-radius: 16px;
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        padding: 21px;
+        width: 37%;
+        height: 65px;
+        font-size: large;
+      }
+
+      .option {
+        border-radius: 16px;
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        padding: 21px;
+        width: 90%;
+        height: 65px;
+      }
+      .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        width: 100%;
+      }
+
+      select,
+      input {
+        border: 1px solid transparent;
+        font-size: large;
+        padding: 10px;
+        color: #afafaf;
+      }
+      .currency-code {
+        font-size: 26px;
+      }
+
+      .currency-flag {
+        font-size: 35px;
+      }
+
+      .currency-icon {
+        aspect-ratio: 0.88;
+        object-fit: contain;
+        object-position: center;
+        width: 23px;
+      }
+
+      .exchange-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 26px;
+      }
+
+      .form-fields {
+        display: flex;
+        margin-top: 64px;
+        width: 516px;
+        max-width: 100%;
+        flex-direction: column;
+        font-size: 26px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .form-field {
+        border-radius: 16px;
+        background-color: #efefef;
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px 47px 25px;
+      }
+
+      .amount-selector {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 65px;
+        font-size: large;
+      }
+      .amount-container {
+        width: 100%;
+        border-radius: 16px;
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
+        gap: 19px;
+        padding: 21px;
+      }
+
+      .selector {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .content {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-field {
+        margin-top: 44px;
+      }
+
+      .service-icon {
+        aspect-ratio: 1.46;
+        object-fit: contain;
+        object-position: center;
+        width: 19px;
+        margin: auto 0;
+      }
+
+      .spacer {
+        min-height: 101px;
+        margin-top: 64px;
+        width: 480px;
+        max-width: 100%;
+      }
+
+      .submit-button {
+        align-self: stretch;
+        width: 298px;
+        border-radius: 16px;
+        background-color: #ff5674;
+        /* margin-top: 64px; */
+        min-height: 81px;
+        max-width: 100%;
+        font-size: 26px;
+        color: #fff;
+        text-align: center;
+        padding: 21px 42px;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: #c83550;
+        }
+      }
+
+      .amount-input {
+        background-color: #efefef;
+        width: 100%;
+      }
+
+      .navicon,
+      .backicon {
+        width: 60px;
+        height: 60px;
+        &:hover {
+          width: 65px;
+          height: 65px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          align-self: stretch;
+          display: flex;
+          min-height: 100vh;
+          width: 100%;
+          flex-direction: column;
+          justify-content: start;
+          margin: 0 auto;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="logo-wrapper">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacaacacab12bcfc073815c5e1772ec358eea2750112d224d426b1b5d711c623?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+          alt="Main logo"
+          class="main-logo"
+        />
+      </header>
+      <div class="content">
+        <div class="navBar">
+          <img class="backicon" src="./backicon.png" alt="backicon" />
+          <a href="category.html"
+            ><img class="navicon" src="./nav.png" alt="navicon"
+          /></a>
+        </div>
+        <section class="currency-form">
+          <h1 class="form-title">
+            <span>박정근님에게 딱 맞는</span>
+            <br />
+            <span style="font-weight: 900; color: #ff5674"
+              >개인 환전 수수료</span
+            >
+            <span>를 찾기 위해</span>
+            <br />
+            <span>이런 정보가 필요해요</span>
+          </h1>
+        </section>
+        <div class="selector">
+          <div class="currency-selector">
+            <select class="currency-option">
+              <option>
+                <span class="currency-code" type="">KRW 🇰🇷</span>
+              </option>
+              <option>
+                <span class="currency-code" type="">JPY 🇯🇵</span>
+              </option>
+              <option>
+                <span class="currency-code" type="">USD 🇺🇸</span>
+              </option>
+              <option>
+                <span class="currency-code" type="">EUR 🇪🇺</span>
+              </option>
+            </select>
+
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/b3a483371bb4fba194049b051dafcd7d3d1ecc4a9f67e9c8750635d6d970bcf8?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt="Exchange"
+              class="exchange-icon"
+            />
+            <select class="currency-option">
+              <option>
+                <span class="currency-code" selected disabled hidden
+                  >JPY 🇯🇵</span
+                >
+              </option>
+              <option>
+                <span class="currency-code">KRW 🇰🇷</span>
+              </option>
+              <option>
+                <span class="currency-code">USD 🇺🇸</span>
+              </option>
+              <option>
+                <span class="currency-code">EUR 🇪🇺</span>
+              </option>
+            </select>
+          </div>
+
+          <div class="amount-selector">
+            <div class="amount-container">
+              <input class="amount-input" type="text" placeholder="환전 금액" />
+              <span>JPY</span>
+            </div>
+          </div>
+          <select class="option">
+            <option>
+              <span class="currency-code" selected disabled hidden
+                >우대 사항</span
+              >
+            </option>
+            <option>
+              <span class="currency-code">신한은행 vip: 환율 우대율 90%</span>
+            </option>
+            <option>
+              <span class="currency-code">신한카드 이용시 수수료 면제</span>
+            </option>
+            <option>
+              <span class="currency-code">신한은행 온라인 전용 우대 환율</span>
+            </option>
+          </select>
+        </div>
+
+        <div class="spacer"></div>
+        <div>
+          <a href="result.html"
+            ><button type="submit" class="submit-button">수수료 검색</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

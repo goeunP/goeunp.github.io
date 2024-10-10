@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .page {
+        align-self: stretch;
+        display: flex;
+        min-height: 1208px;
+        width: 558px;
+        flex-direction: column;
+        justify-content: start;
+        margin: auto 0;
+        border: 1px solid black;
+      }
+      .logo-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+      }
+      .main-logo {
+        aspect-ratio: 8.62;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+      .content {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navicon,
+      .backicon {
+        width: 60px;
+        height: 60px;
+        &:hover {
+          width: 65px;
+          height: 65px;
+        }
+      }
+
+      .search-badge {
+        width: 95%;
+        border-radius: 25px;
+        background-color: #efefef;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+margin: 10px;
+      }
+      .search-input {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-size: 16px;
+        color: #333;
+        background-color:#efefef;
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+      .search-input::placeholder {
+        color: #999;
+      }
+      .img-2 {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 36px;
+        cursor: pointer; 
+      }
+      .img-2:active {
+        opacity: 0.7; 
+      }
+
+      .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        width: 100%;
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          align-self: stretch;
+          display: flex;
+          min-height: 100vh;
+          width: 100%;
+          flex-direction: column;
+          justify-content: start;
+          margin: 0 auto;
+          padding: 20px;
+          box-sizing: border-box;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="logo-wrapper">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacaacacab12bcfc073815c5e1772ec358eea2750112d224d426b1b5d711c623?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+          alt="Main logo"
+          class="main-logo"
+        />
+      </header>
+      <div class="content">
+        <div class="navBar">
+          <img class="backicon" src="./backicon.png" alt="backicon" />
+          <a href="category.html"
+            ><img class="navicon" src="./nav.png" alt="navicon"
+          /></a>
+        </div>
+        <div class="search-badge">
+            <input
+              type="text"
+              name="q"
+              class="search-input"
+              placeholder="검색어를 입력하세요"
+            />
+            <button
+              type="submit"
+              style="background: none; border: none; padding: 0"
+            >
+              <img
+                id="search-icon"
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/822bb1c0cea24b6ae8f99cbb296a950cb3eeb82a47d92dd944dabc3dde562339?placeholderIfAbsent=true&apiKey=7f59c46ddfa6482f9d12e305b9ebb363"
+                class="img-2"
+                alt="검색 아이콘"
+              />
+            </button>
+      </div>
+      <div class=""><p class="sub"><span class="redsub">환율 수수료</span>검색 결과에요</p></div>
+    </div>
+  </body>
+</html>

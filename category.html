@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .page {
+        align-self: stretch;
+        display: flex;
+        min-height: 1208px;
+        width: 558px;
+        flex-direction: column;
+        justify-content: start;
+        margin: auto 0;
+      }
+      .logo-wrapper {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+      }
+      .navBar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 60px;
+        width: 100%;
+      }
+      .navicon,
+      .backicon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .content {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .category-page {
+        background-color: #fff;
+        display: flex;
+        max-width: 558px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: start;
+      }
+      .hero-section {
+        align-self: stretch;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+      }
+      .hero-image {
+        aspect-ratio: 8.62;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+      }
+      .content-wrapper {
+        background-color: #fff;
+        display: flex;
+        margin-top: 9px;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        padding: 36px 25px 20px;
+      }
+      .icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 37px;
+        padding-right: 20px;
+      }
+      .category-item {
+        display: flex;
+        margin-top: 9px;
+        width: 519px;
+        max-width: 100%;
+        gap: 20px;
+        color: #000;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 24px 0 24px 38px;
+        font: 700 24px "Noto Sans KR", sans-serif;
+        &:hover {
+          background-color: #efefef;
+        }
+      }
+      .category-title {
+        margin: auto 0;
+      }
+      .highlight {
+        color: #ff5674;
+      }
+      .subcategory-container {
+        visibility: hidden;
+        border-radius: 15px;
+        background-color: rgba(241, 241, 241, 0.47);
+        box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.25);
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: start;
+        padding: 20px 34px;
+        border: 3px solid #efefef;
+      }
+      .subcategory-item {
+        display: flex;
+        gap: 27px;
+        white-space: nowrap;
+      }
+      .subcategory-icon {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 47px;
+      }
+      .subcategory-title {
+        align-self: start;
+        &:hover {
+          font-size: 1.4em;
+        }
+      }
+      .divider {
+        aspect-ratio: 200;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        align-self: stretch;
+        margin-top: 9px;
+      }
+      .empty-space {
+        background-color: #fff;
+        display: flex;
+        min-height: 399px;
+        margin-top: 9px;
+        width: 516px;
+        max-width: 100%;
+      }
+
+      .more:hover + .subcategory-container {
+        visibility: visible;
+      }
+      @media (max-width: 991px) {
+        .hero-section,
+        .content-wrapper,
+        .category-item,
+        .subcategory-container {
+          max-width: 100%;
+        }
+        .content-wrapper,
+        .subcategory-container {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .category-item {
+          padding-left: 20px;
+        }
+        .subcategory-item {
+          white-space: initial;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="logo-wrapper">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/dacaacacab12bcfc073815c5e1772ec358eea2750112d224d426b1b5d711c623?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+          alt="Main logo"
+          class="main-logo"
+        />
+      </header>
+      <div class="content">
+        <div class="navBar">
+          <a href="/currency.html">
+            <img class="backicon" src="./backicon.png" alt="backicon"
+          /></a>
+        </div>
+        <section class="category-page">
+          <article class="category-item">
+            <h2 class="category-title">
+              대출 <span class="highlight">수수료</span>
+            </h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdb103dbf551c9548e6bb05ca69612b5842b4c6d093d96689bbd223960071f98?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="icon"
+            />
+          </article>
+
+          <article class="category-item">
+            <h2 class="category-title">
+              환전 <span class="highlight">수수료</span>
+            </h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdb103dbf551c9548e6bb05ca69612b5842b4c6d093d96689bbd223960071f98?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="icon"
+            />
+          </article>
+
+          <article class="category-item">
+            <h2 class="category-title">
+              투자 <span class="highlight">수수료</span>
+            </h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff2283a2df3cb3e5a1b73dded171e91e426ebd505e8c6ce101307635f1d6eca8?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="icon"
+            />
+          </article>
+
+          <article class="category-item">
+            <h2 class="category-title">
+              저축 및 예금 <span class="highlight">수수료</span>
+            </h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff2283a2df3cb3e5a1b73dded171e91e426ebd505e8c6ce101307635f1d6eca8?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="icon"
+            />
+          </article>
+
+          <article class="category-item more">
+            <h2 class="category-title">
+              신용카드 <span class="highlight">수수료</span>
+            </h2>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdb103dbf551c9548e6bb05ca69612b5842b4c6d093d96689bbd223960071f98?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="icon"
+            />
+          </article>
+
+          <section class="subcategory-container">
+            <div class="subcategory-item">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/afdc518dc1feeeda30f9fb046df6c56a6539b3ffe1ce1dc230004a7331bfe956?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+                alt=""
+                class="subcategory-icon"
+              />
+              <h3 class="subcategory-title">연회비</h3>
+            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0c23bb86ebf20f5bdcdaf942e08a0b4624e074c1d0872dc6f6ecfe532be8838e?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+              alt=""
+              class="divider"
+            />
+            <div class="subcategory-item">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/86cd32c74c7fd9ab55bf0641823122d166527499331cd289d787903771a5bb7d?placeholderIfAbsent=true&apiKey=e158ddd37e39454d8e0c7af162e72462"
+                alt=""
+                class="subcategory-icon"
+              />
+              <h3 class="subcategory-title">해외 거래</h3>
+            </div>
+          </section>
+
+          <div class="empty-space" aria-hidden="true"></div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
